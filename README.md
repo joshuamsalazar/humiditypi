@@ -26,3 +26,7 @@ IMPORTANT: The script does not automatically configure the mail account (yet!). 
 $ nano ./install_required_packages.sh
 
   After the installation of the required software (may take a while), the program should be compiled and then run with the following syntax.
+
+-$ ./compile.sh
+
+-$ ./start.sh [integer number of minutes] [destinatary email]
