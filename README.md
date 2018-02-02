@@ -14,8 +14,12 @@ http://wiringpi.com/download-and-install/
 
 $ sudo ./install_required_packages.sh 
 
+IMPORTANT: The script do not automatically configures the mail account (yet!). So its important to open ./install_required_packages.sh with some text reader and follow the process in parallel. I added enough information for saving you time.
+
+$ nano ./install_required_packages.sh
+
   After the installation of the required software (may take a while), the program should be compiled and then run with the following syntax.
 
 $ ./compile.sh
 
-$ ./start.pdf [integer number of minutes] [destinatary email]
+$ ./start.sh [integer number of minutes] [destinatary email]
