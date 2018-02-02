@@ -1,0 +1,46 @@
+% --------------------------------------------------------------
+% This is all preamble stuff that you don't have to worry about.
+% Head down to where it says "Start here"
+% --------------------------------------------------------------
+ 
+\documentclass[12pt]{article}
+
+\usepackage{graphicx}
+%\usepackage{datetime}
+\graphicspath{ {} }
+
+\begin{document}
+ 
+% --------------------------------------------------------------
+%                         Start here
+% --------------------------------------------------------------
+ 
+%\renewcommand{\qedsymbol}{\filledbox}
+ 
+\title{Environment Conditions Report}%replace X with the appropriate number
+\author{T-Water-Y Team\\ %replace with your name
+} %if necessary, replace with your course title
+
+\maketitle 
+% \center Reporting at \currenttime
+ 
+
+The following data was generated and sent to the provided email address.
+
+
+\begin{figure}[ht]
+\centering
+     \includegraphics[width=1.0\textwidth]{prueba_20171130.png}
+      \caption{Humidity/Temperature vs. Time}
+       \label{normal_case}
+\end{figure}
+
+%Note 1: The * tells LaTeX not to number the lines.  If you remove the *, be sure to remove it below, too.
+%Note 2: Inside the align environment, you do not want to use $-signs.  The reason for this is that this is already a math environment. This is why we have to include \text{} around any text inside the align environment.
+
+ 
+% --------------------------------------------------------------
+%     You don't have to mess with anything below this line.
+% --------------------------------------------------------------
+ 
+\end{document}
