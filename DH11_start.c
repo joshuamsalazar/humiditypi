@@ -2,14 +2,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
-
+/* Special thanks to the uugear.com TEAM, that shared this code with the world :) */
 #define MAX_TIMINGS	85
 #define DHT_PIN		7	/* GPIO-22 */
 int lectura = 0;
 int data[5] = { 0, 0, 0, 0, 0 };
 FILE *fp;  
-
-
 
 void read_dht_data()
 	
@@ -81,7 +79,7 @@ void read_dht_data()
 			c = -c;
 		}
 		float f = c * 1.8f + 32;
-		fprintf(fp ,"%d %.1f %.1f \n", lectura*5 , h, c );
+		fprintf(fp ,"%d %.1f %.1f \n", lectura*5 , h, c );  /**FIX TIME INTERVALS OF READING DATA, and HANDLING GARBAGE DH11 data!!!**/
 		fflush(fp);
 		printf("\t Humedad: %.1f \t Temperatura: %.1f \n ", h, c);
 		
@@ -95,18 +93,14 @@ int main ()
 {
             
 	fp = fopen("mydata.dat","w");
-	printf( "******* Prototype T-Water-Y ****** Powered by Raspberry Pi - DHT11 ********** \n \t Starting temperature/humidity test\n" );
-//	fprintf(fp,"Raspberry Pi DHT11/DHT22 temperature/humidity test\n" );
-	
-
-//	fflush(fp);
+	printf( "******* Prototype T-Water-Y ****** Powered by Raspberry Pi - DHT11 ********** \n \t Starting temperature/humidity test\n" )
 	if ( wiringPiSetup() == -1 )
 		exit( 1 );
 
 	while ( 1 )
 	{
 		read_dht_data();
-		delay( 1000 ); /* wait 2 seconds before next read */
+		delay( 1000 ); /* wait 1 second before next read */
 	}
 
 	return(0);
