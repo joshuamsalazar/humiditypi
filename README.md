@@ -1,6 +1,6 @@
 # Humidity Pi
 The following package allows you to generate automatically a LaTeX report that can be sent from a Gmail account. The report contains the data gathered from a DH11 sensor, everything running automatically on a Raspberry Pi. With some proper package installation and one line of code, you will be able to generate reports of this kind:
-https://github.com/joshuamsalazar/humiditypi/blob/first_upload/Sample_report.pdf
+https://github.com/joshuamsalazar/humiditypi/raw/master/Sample_report.pdf
 
 The required software for this script is: (don't worry, the next scripts will help you to install them)
 
