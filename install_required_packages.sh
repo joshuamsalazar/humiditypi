@@ -49,7 +49,7 @@ touch ~/.mutt/certificates
 
 touch ~/.mutt/muttrc
 
-#Now add the following configuration in the ~/.mutt/muttrc file:
+#Now add the following configuration in the ~/.mutt/muttrc file (removing the # symbols from the beggining of all the lines):
 
 ##set ssl_starttls=yes
 ##set ssl_force_tls=yes
